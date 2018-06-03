@@ -9,7 +9,15 @@ It is also optimised, i do caching, unlike imgui. The editor scene from the demo
 translate all elements into draws and another 100 for opengl to rasterize on my ancient 2-core laptop.
 
 Requires c++14.
-Build with cmake. You may need to provide a path to glfw libraries on your system, especially on windows. Everything else was small enough to be included as sources.
+Build with cmake. You need to have glfw library installed on linux, on win it is built automatically(see demo/.cmake/glfw.cmake). Win build tested with mingw 7.3.
+There is prebuilt windows binary in ./bin
+
+Running on linux:
+cd ./demo/demo/proj
+cmake ./
+make -j4
+cd ./bin
+./tester_main
 
 Distributed under BSD License, licenses for libraries are as stated in libraries.
 

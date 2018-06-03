@@ -1,0 +1,3 @@
+set(CEREAL_INCLUDES "${LIBS}/cereal" CACHE FILEPATH "Cereal path")
+
+append(EXTRA_INCLUDES ${CEREAL_INCLUDES})

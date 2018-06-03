@@ -1,0 +1,3 @@
+set(UTFCPP_INCLUDES "${LIBS}/utfcpp" CACHE FILEPATH "utfcpp path")
+
+append(EXTRA_INCLUDES ${UTFCPP_INCLUDES})

@@ -1,0 +1,10 @@
+if(WIN32)
+else()
+ append(EXTRA_LINK_LIBS "-ldl")
+endif()
+set(GL3W_PATH "${LIBS}/gl3w" CACHE FILEPATH "GL3W path")
+set(GL3W_INCLUDES "${GL3W_PATH}/include")
+file(GLOB GL3W_SRC "${GL3W_PATH}/src/*.cpp")
+
+append(EXTRA_INCLUDES ${GL3W_INCLUDES})
+append(EXTRA_SRC ${GL3W_SRC})

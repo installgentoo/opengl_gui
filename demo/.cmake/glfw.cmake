@@ -1,0 +1,13 @@
+if(WIN32)
+ set(GLFW_PATH "${LIBS}/glfw")
+ add_subdirectory(${GLFW_PATH} build)
+ set(GLFW_INCLUDES "${GLFW_PATH}/include")
+ append(EXTRA_LINK_LIBS "glfw")
+else()
+ set(GLFW_INCLUDES "/usr/include" CACHE FILEPATH "GLFW headers")
+ set(GLFW_LIBRARIES "glfw.so" CACHE FILEPATH "GLFW lib")
+endif()
+
+append(EXTRA_INCLUDES ${GLFW_INCLUDES})
+append(EXTRA_LINK_LIBS ${GLFW_LIBRARIES})
+add_definitions(-DUSE_GLFW)

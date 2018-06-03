@@ -1,0 +1,3 @@
+set(GLM_INCLUDES "${LIBS}/glm" CACHE FILEPATH "Glm path")
+
+append(EXTRA_INCLUDES ${GLM_INCLUDES})
